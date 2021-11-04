@@ -1,0 +1,561 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul { list-style: none; }
+
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1,5em;
+}
+.container {
+    max-width: 73.125em;
+    padding: 0em 0.9375em;
+    margin: 0em auto;
+    display: flex;
+
+}
+/* =============== HEADER ================*/
+#header {
+   position: relative;
+   height: 64px;
+}
+nav {
+    background-color: #23282d;
+    /* padding: 1.75em 0em 0.5em 0em; */
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    
+}
+nav .logo {
+    line-height: 64px;
+}
+
+form#search {
+    position: relative;
+    background: #131619;
+    display: none;
+    
+}
+form#search input {
+    width: 15.5em;
+    padding: 0.4375em 2.625em 0.4375em 0.875em;
+    outline: none;
+    color: #fff;
+    border: none;
+    background: none;
+}
+form#search button {
+    position: absolute;
+    top: 0em;
+    right: 0em;
+    border: none;
+    background: none;
+    padding: 0.3125em 0.75em;
+    bottom: 0em;
+    color: #a2a1a1;
+}
+/* nav */
+/* nav {
+    flex: 100%;
+    padding: 0.375em 0em 0.5em 0em;
+} */
+.main-menu {
+    margin: 0em;
+    display: flex;
+    border-right: 0.625em solid red;
+    display: none;
+    width: 100%;
+}
+.main-menu li a {
+    padding: 0.375em 1.25em;
+    display: block;
+    color: #fff;
+}
+.main-menu li:first-child a {
+    padding-left: 0em;
+}
+.main-menu li:hover a{
+    color:#4db2ec;
+    text-decoration: none;
+}
+.responsive-menu {
+    /* display: none; */
+    position: absolute;
+    top: 64px;
+    width: 100%;
+    background: #2d3436;
+    left: 0px;
+    margin: 0px;
+    display: none;
+}
+.responsive-menu li {
+    border: 1px solid #434648;
+}
+.responsive-menu li a {
+    display: block;
+    line-height: 50px;
+    color: #636e72;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    
+}
+.responsive-menu li:hover a{
+    color: #fff;
+}
+.responsive-toggle {
+    font-size: 20px;
+  
+    color: #fff;
+    padding: 0px 15px;
+  line-height: 64px;
+}
+.responsive-toggle:hover {
+    color: #fff;
+}
+/* End-nav */
+/* ===========wp freatured post=========== */
+#wp-freatured-post {
+    margin-top: 30px;
+    
+    
+}
+.freatured-post {
+    flex: 100%;
+}
+.freatured-post .box-head h3 {
+    display: inline-block;
+    margin: 0em;
+    background-color: #23282d;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.0625em 0.9375em;
+    text-transform: uppercase;
+
+}
+
+.box-head {
+    margin-bottom: 1.25em;
+}
+.freatured-list-post li {
+    /* flex: 22.5em 0 1; Vì ảnh có kích thước 360px nên khai báo độ rộng là 360px */
+    flex: 31.6% 0 1;
+}
+.freatured-post .box-body {
+    padding-bottom: 1.875em;
+    border-bottom: 0.0625em solid #dadada;
+   
+}
+.freatured-list-post {
+    margin: 0em;
+    display: none;
+}
+.freatured-list-post li a{
+    display: block;
+ 
+}
+.freatured-list-post li a.post-thumb {
+    overflow: hidden;
+}
+.freatured-list-post li a.post-title {
+    text-transform: uppercase;
+    color: #5f5f5f;
+    font-weight: 600;
+    margin-top: 1.25em;
+}
+.freatured-list-post li a.post-thumb img:hover{
+    transform: scale(1.05);
+}
+.freatured-list-post li a.post-thumb img {
+    transition: all 0.25s;
+    max-width: 100%;
+   
+}
+.freatured-list-post li:hover a{
+    text-decoration: none;
+}
+.responsive-freatured-list-post li {
+    flex: 100% 0 1;
+    text-align: center;
+}
+.responsive-freatured-list-post li a{
+    display: block;
+ 
+}
+.responsive-freatured-list-post {
+    display: flex;
+    flex-direction: column;
+}
+.responsive-freatured-list-post li a.post-thumb {
+    overflow: hidden;
+}
+.responsive-freatured-list-post li a.post-title {
+    text-transform: uppercase;
+    color: #5f5f5f;
+    font-weight: 600;
+    margin-top: 1.25em;
+}
+.responsive-freatured-list-post li a.post-thumb img:hover{
+    transform: scale(1.05);
+}
+.responsive-freatured-list-post li a.post-thumb img {
+    transition: all 0.25s;
+    max-width: 100%;
+}
+.responsive-freatured-list-post li:hover a{
+    text-decoration: none;
+}
+/* =========wp-content=========== */
+#wp-content {
+    padding-top: 1.375em;
+    padding-bottom: 5em;
+    flex-direction: column;
+    flex: 100%;
+}
+/* #content {
+    padding-right: 0.9375em;
+    
+} */
+.news-post .box-head{
+    border-bottom: 0.125em solid #4db2ec;
+}
+
+.news-post .box-head h3{
+    margin: 0em;
+    display: inline-block;
+    background: #4db2ec;
+    padding: 0em 0.625em;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.list-post {
+    margin: 0em;
+    display: none;
+}
+ul.list-post li {
+    display: flex;
+    margin-bottom: 2.25em;
+}
+ul.list-post li img {
+    max-width: 100%;
+}
+
+.more-info {
+    padding-left: 1.875em;
+    
+}
+ul.list-post li .post-title {
+    display: block;
+    font-size: 1.3125em;
+    color: #111111;
+    font-weight: 600;
+}
+ul.list-post li .post-published {
+    font-size: 0.6875em;
+   padding-top: 0.375em;
+   padding-bottom: 0.375em;
+}
+ul.list-post li .post-published .post-author {
+    color: #111111;
+    font-weight: 600;
+}
+ul.list-post li .post-published .post-date {
+    color: #aaaaaa;
+
+}
+ul.list-post li .post-excerpt {
+    font-size: 0.8125em;
+    margin: 0px;
+    color: #777777;
+
+}
+ul.list-post li .more-info:hover .post-title{
+    color:#4db2ec;
+    text-decoration: none;
+    
+}
+/* css responsive-list-post */
+ul.responsive-list-post li {
+    display: flex;
+    margin-bottom: 2.25em;
+    flex-direction: column;
+   
+}
+ul.responsive-list-post li .post-thumb {
+    margin: auto;
+}
+ul.responsive-list-post li .post-thumb img {
+    max-width: 100%;
+  
+}
+ul.responsive-list-post .more-info {
+    padding-left: 0px;
+    
+}
+ul.responsive-list-post li .post-title {
+    display: block;
+    font-size: 1.3125em;
+    color: #111111;
+    font-weight: 600;
+}
+ul.responsive-list-post li .post-published {
+    font-size: 0.6875em;
+   padding-top: 0.375em;
+   padding-bottom: 0.375em;
+}
+ul.responsive-list-post li .post-published .post-author {
+    color: #111111;
+    font-weight: 600;
+}
+ul.responsive-list-post li .post-published .post-date {
+    color: #aaaaaa;
+
+}
+ul.responsive-list-post li .post-excerpt {
+    font-size: 0.8125em;
+    margin: 0px;
+    color: #777777;
+
+}
+ul.responsive-list-post li .more-info:hover .post-title{
+    color:#4db2ec;
+    text-decoration: none;
+    
+}
+/* --------End Content--------- */
+/* #sidebar {
+    padding-left: 0.9375em;
+    display: none;
+} */
+.banner {
+    display: none;
+}
+/* responsive csss sidebar */
+.responsive-banner {
+    text-align: center;
+}
+.responsive-banner img {
+    max-width: 100%;
+    cursor: pointer;
+}
+.banner img {
+    max-width: 100%;
+}
+.top-topic {
+    margin-top: 2.5em;
+}
+.top-topic .box-head{
+    border-bottom: 0.125em solid #ff2d2d;
+}
+.top-topic .box-head h3 {
+    margin: 0em;
+    display: inline-block;
+    background: #ff2d2d;
+    padding: 0em 0.75em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.list-topic li {
+    padding:0.375em 0em;
+}
+.list-topic li a {
+        position: relative;
+        display: block;
+        color: #212121;
+}
+.list-topic li a span{
+        position: absolute;
+        right: 1.25em;
+        top: 0em;
+      
+}
+ul.list-topic li a:hover {
+        color: #ff2d2d;
+        text-decoration: none;
+}
+
+
+
+/* End css sidebar */
+#footer {
+    background: #2e2f30;
+    padding-top: 3.25em;
+    padding-bottom: 4.6875em;
+    color: #f6f6f6;
+}
+/* .logo-footer {
+    flex: 17.5em;
+    padding-right: 0.9375em;
+} */
+.logo-footer .box-head h2 {
+visibility: hidden; /* Ẩn chữ giữ nguyên khối */
+}
+/* .about-us {
+    flex: 42.5em;
+    padding-right: 11.25em;
+
+} */
+.about-us .box-head h2,.follow-us .box-head h2{
+    margin: 0em;
+    display: block;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.about-us .box-body p {
+    font-size: 1.125em;
+    margin: 0em;
+
+}
+/* .follow-us {
+    flex: 11.25em;
+    padding-right: 0.9375em;
+} */
+.list-social {
+    display: flex;
+    margin: 0em;
+}
+.list-social li {
+    margin-right: 0.9375em;
+}
+.list-social li a {
+    display: block;
+    padding: 0.3125em 0.625em;
+    background: #434648;
+}
+.list-social li:last-child {
+    margin: 0em;
+}
+.list-social li a i {
+    color:#fff
+}
+.list-social li:hover a {
+    background-color: #4db2ec;
+}
+/* End css footer */
+#wp-copyright {
+    background: #222527;
+    padding-top: 0.6875em;
+    padding-bottom: 0.6875em;
+}
+.copyright {
+    color: #fff;
+    margin: 0em;
+   
+}
+ul.list-info {
+margin: 0em;
+}
+ul.list-info li a{
+    color: #fff;
+    display: block;
+    padding-left: 0.9375em;
+    font-size: 0.875em;
+}
+ul.list-info li:hover a {
+    color: #4db2ec;
+    text-decoration: none;
+}
+ul.list-info li:first-child a{
+    padding-left: 0em;
+}
+/* Small devices(landsacpe phones,576px and up) */
+@media(min-width:576px) {}
+
+/* medium devices (tablets,768px and up) */
+@media (min-width:768px) {}
+
+/* Large devices(desktop,992px and up) */
+@media (min-width:992px) {
+    body {
+        font-size: 16px;
+    }
+    #header {
+        height: 110px;
+    }
+nav {
+    padding: 1.75em 0em 0.5em 0em;
+}
+nav .logo {
+    line-height: 38px;
+}
+    form#search {
+        display: block;
+    }
+    .responsive-toggle {
+        display: none;
+    }
+    .main-menu {
+       display: flex;
+    }
+    .responsive-menu {
+        display: none;
+        
+  }
+  /* End css header */
+  .freatured-list-post {
+      display: flex;
+  }
+  .responsive-freatured-list-post {
+      display: none;
+  }
+  /* End css responsive-freatured-list-post*/
+    #wp-content {
+        flex-direction: row;
+        flex: 100%;
+    }
+    #content {
+        padding-right: 0.9375em;
+        flex: 66.84%;
+    }
+    .responsive-list-post {
+        display: none;
+    }
+    .list-post {
+        display: block;
+    }
+    .list-post li .post-thumb {
+        flex: 35.2%;
+    }
+    .list-post li .more-info {
+        flex: 64.8%;
+    }
+    #sidebar {
+        padding-left: 0.9375em;
+        flex: 33.16%;
+    
+    }
+    /* End css wp-content */
+    .banner {
+        display: block;
+    }
+    .responsive-banner {
+        display: none;
+    }
+    .logo-footer {
+        padding-right: 0.9375em;
+        flex: 17.5em;
+    }
+    .about-us {
+        padding-right: 11.25em;
+        flex: 42.5em;
+    }
+    .follow-us {
+        flex: 11.25em;
+        padding-right: 0.9375em;
+    }
+    .flex-direction-column {
+        flex-direction: row;
+    }
+}
+
+/* Extra large devices(large desktops,1200px and up) */
+@media(min-width:1200px) {}
